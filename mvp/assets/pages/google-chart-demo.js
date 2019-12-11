@@ -62,7 +62,7 @@ $(function () {
 
   function drawChart2() {
     var data = google.visualization.arrayToDataTable([
-      ['Year', 'Sales', 'Expenses'],
+      ['Year', 'Upload', 'Download'],
       ['2013',  1000,      400],
       ['2014',  1170,      460],
       ['2015',  660,       1120],
@@ -307,15 +307,15 @@ $(function () {
   function drawChart8() {
     var data = google.visualization.arrayToDataTable([
       ['Task', 'Hours per Day'],
-      ['Work',     11],
-      ['Eat',      2],
-      ['Commute',  2],
-      ['Watch TV', 2],
-      ['Sleep',    7]
+      ['Througput',     11],
+      ['Físico',      2],
+      ['Clima',  2],
+      ['Aquecimento', 2],
+      ['Energia',    7]
     ]);
 
     var options = {
-      title: 'My Daily Activities',
+      title: 'Falhas',
       pieHole: 0.4,
       fontName: 'inherit',
       height: 340,
