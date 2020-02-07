@@ -46,9 +46,10 @@
                   center: 'title',
                   right: 'month,basicWeek,basicDay'
               },
-              editable: true,
-              eventLimit: true, // allow "more" link when too many events
-              droppable: true, // this allows things to be dropped onto the calendar !!!
+              editable: false,
+              eventLimit: false, // allow "more" link when too many events
+              droppable: false, // this allows things to be dropped onto the calendar !!!,
+              displayEventTime: false,
               drop: function(date, allDay) { // this function is called when something is dropped
 
                   // retrieve the dropped element's stored Event Object
@@ -73,48 +74,24 @@
 
               },
               events: [{
-                  title: 'All Day Event',
+                  title: 'FALHA MASSIVA MG',
                   start: new Date(y, m, 1)
                   },
                   {
-                      title: 'Long Event',
-                      start: new Date(y, m, d-5),
-                      end: new Date(y, m, d-2)
+                      title: 'FALHA MASSIVA SP',
+                      start: new Date(y, m, 9),
+                      end: new Date(y, m, 11)
                   },
                   {
                       id: 999,
-                      title: 'Repeating Event',
-                      start: new Date(y, m, d-3, 16, 0),
-                      allDay: false
+                      title: 'FALHA MASSIVA RJ',
+                      start: new Date(y, m, 18),
+                      allDay: true
                   },
                   {
-                      id: 999,
-                      title: 'Repeating Event',
-                      start: new Date(y, m, d+4, 16, 0),
-                      allDay: false
-                  },
-                  {
-                      title: 'Meeting',
-                      start: new Date(y, m, d, 10, 30),
-                      allDay: false
-                  },
-                  {
-                      title: 'Lunch',
-                      start: new Date(y, m, d, 12, 0),
-                      end: new Date(y, m, d, 14, 0),
-                      allDay: false
-                  },
-                  {
-                      title: 'Birthday Party',
-                      start: new Date(y, m, d+1, 19, 0),
-                      end: new Date(y, m, d+1, 22, 30),
-                      allDay: false
-                  },
-                  {
-                      title: 'Click for Google',
+                      title: 'FALHA SC',
                       start: new Date(y, m, 28),
-                      end: new Date(y, m, 29),
-                      url: 'http://google.com/'
+                      end: new Date(y, m, 29)
                   }]
           });
           
