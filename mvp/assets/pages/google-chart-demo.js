@@ -14,7 +14,7 @@ $(function () {
 
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
-      ['Year', 'Sales', 'Expenses'],
+      ['Year', 'Falhas', 'Disponibilidade'],
       ['2004',  1000,      400],
       ['2005',  1170,      460],
       ['2006',  660,       1120],
@@ -62,7 +62,7 @@ $(function () {
 
   function drawChart2() {
     var data = google.visualization.arrayToDataTable([
-      ['Year', 'Sales', 'Expenses'],
+      ['Year', 'Upload', 'Download'],
       ['2013',  1000,      400],
       ['2014',  1170,      460],
       ['2015',  660,       1120],
@@ -135,11 +135,11 @@ $(function () {
 
   function drawChart4() {
     var data = google.visualization.arrayToDataTable([
-      ['Mon', 20, 28, 38, 45],
-      ['Tue', 31, 38, 55, 66],
-      ['Wed', 50, 55, 77, 80],
-      ['Thu', 77, 77, 66, 50],
-      ['Fri', 68, 66, 22, 15]
+      ['MG', 20, 28, 38, 45],
+      ['SC', 31, 38, 55, 66],
+      ['RJ', 50, 55, 77, 80],
+      ['ES', 77, 77, 66, 50],
+      ['SP', 68, 66, 22, 15]
       // Treat first row as data as well.
     ], true);
 
@@ -307,15 +307,15 @@ $(function () {
   function drawChart8() {
     var data = google.visualization.arrayToDataTable([
       ['Task', 'Hours per Day'],
-      ['Work',     11],
-      ['Eat',      2],
-      ['Commute',  2],
-      ['Watch TV', 2],
-      ['Sleep',    7]
+      ['Througput',     11],
+      ['Físico',      2],
+      ['Clima',  2],
+      ['Aquecimento', 2],
+      ['Energia',    7]
     ]);
 
     var options = {
-      title: 'My Daily Activities',
+      title: 'Falhas',
       pieHole: 0.4,
       fontName: 'inherit',
       height: 340,

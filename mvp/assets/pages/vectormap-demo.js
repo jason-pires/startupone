@@ -118,8 +118,8 @@
         }]
       });
     }
-    if ($('#usa-map').length) {
-      $('#usa-map').vectorMap({map: 'us_aea_en',backgroundColor: 'transparent',
+    if ($('#sa-map').length) {
+      $('#sa-map').vectorMap({map: 'south_america_mill',backgroundColor: 'transparent',
         regionStyle: {
           initial: {
             fill: '#2e7ce4'
