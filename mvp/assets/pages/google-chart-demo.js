@@ -8,23 +8,35 @@
 $(function () {
   'use strict';
 
+  function getRandomArbitrary(min, max) {
+    let n1 = Math.random() * (max - min) + min;
+    return Math.trunc(n1 * 100) / 100;
+  }
+
+  function populateArray(initialDay, finalDay, min, max){
+    let _arr = [];
+    for (let index = initialDay; index < finalDay; index++) {
+      let val1 = getRandomArbitrary(min, max);
+      let val2 = getRandomArbitrary(min, max);
+      _arr.push([index, val1, val2]);
+    }
+    return _arr;
+  }
+
   // Line chart
   google.charts.load('current', {'packages':['corechart']});
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['Year', 'Falhas', 'Disponibilidade'],
-      ['2004',  1000,      400],
-      ['2005',  1170,      460],
-      ['2006',  660,       1120],
-      ['2007',  1030,      540]
-    ]);
+    let arr0 = [['Dia', 'ABEV3', 'PETR4']];
+    let arr1 = populateArray(10, 30, 20, 90);
+    let arr = arr0.concat(arr1);
+
+    var data = google.visualization.arrayToDataTable(arr);
 
     var options = {
       fontName: 'inherit',
       height: 340,
-      curveType: 'function',
       fontSize: 12,
       chartArea: {
           left: '5%',
@@ -45,7 +57,7 @@ $(function () {
               fontSize: 14
           }
       },
-      legend: { position: 'bottom' },
+      legend: { position: 'top' },
       lineWidth: 3,
       colors: ['#2e7ce4', '#00c2b2']
     };
@@ -135,11 +147,11 @@ $(function () {
 
   function drawChart4() {
     var data = google.visualization.arrayToDataTable([
-      ['MG', 20, 28, 38, 45],
-      ['SC', 31, 38, 55, 66],
-      ['RJ', 50, 55, 77, 80],
-      ['ES', 77, 77, 66, 50],
-      ['SP', 68, 66, 22, 15]
+      ['ABEV3', 20, 28, 38, 45],
+      ['PETR4', 31, 38, 55, 66],
+      ['BBSA3', 50, 55, 77, 80],
+      ['DOL', 77, 77, 66, 50],
+      ['FBOK3', 68, 66, 22, 15]
       // Treat first row as data as well.
     ], true);
 
@@ -306,16 +318,16 @@ $(function () {
   google.charts.setOnLoadCallback(drawChart8);
   function drawChart8() {
     var data = google.visualization.arrayToDataTable([
-      ['Task', 'Hours per Day'],
-      ['Througput',     11],
-      ['Físico',      2],
-      ['Clima',  2],
-      ['Aquecimento', 2],
-      ['Energia',    7]
+      ['Produto', 'Porcentagem'],
+      ['Renda Fixa', 20],
+      ['Renda Variável', 35],
+      ['Fundos', 20],
+      ['Multi mercado', 10],
+      ['Dolar', 15]
     ]);
 
     var options = {
-      title: 'Falhas',
+      title: 'Portifólio de Ações',
       pieHole: 0.4,
       fontName: 'inherit',
       height: 340,
